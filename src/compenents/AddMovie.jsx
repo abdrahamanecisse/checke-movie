@@ -15,12 +15,12 @@ const AddMovie = ({addMovie}) => {
      const handleShow = () => setShow(true);
      
      const handleAdd = () => {
-        addMovie({title,description,posterUrl,rate,})
+        addMovie({title, description, posterUrl, rate,})
         handleClose()
 
      }
   return (
-    <div className="container mt-2">
+    <>
       {" "}
       <Button variant="dark" onClick={handleShow}>
         <FaPlusCircle style={{ margin: "1px 6px" }} />
@@ -71,6 +71,7 @@ const AddMovie = ({addMovie}) => {
                 size={24}
                 color2={"#ffd700"}
                 half={false}
+                value={rate}
               />
             </Form.Group>
           </Form>
@@ -85,7 +86,7 @@ const AddMovie = ({addMovie}) => {
           </Button>
         </Modal.Footer>
       </Modal>
-    </div>
+    </>
   );
 }
 
